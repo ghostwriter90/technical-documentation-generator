@@ -10,35 +10,34 @@
         <script><![CDATA[var GetTableAttributes = Class.create();
 GetTableAttributes.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 	getAttributes: function() {
-			var tableRecord = new GlideRecord('sys_documentation');
-			tableRecord.get(this.getParameter('name'));
-			tableRecord.query();
-		    var tableString = "";
+		var tableRecord = new GlideRecord('sys_documentation');
+
+		tableRecord.addQuery('name', '=', this.getParameter('name'));
+		tableRecord.query();
+		var tableString = "";
 		
-		    while(tableRecord.next()) {
-			 
-			 tableString += tableRecord;
-			 tableString += ",";
+		while(tableRecord.next()) {
+			
+			tableString += tableRecord.element;
+			tableString += ",";
 		}
-		
-	
-		
+
 		return tableString;
 	},
 	
-    type: 'GetTableAttributes'
+	type: 'GetTableAttributes'
 });]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-10-19 12:27:28</sys_created_on>
         <sys_id>d9ef15534fb903001d5d8ab18110c744</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>21</sys_mod_count>
         <sys_name>GetTableAttributes</sys_name>
         <sys_package display_value="Technical Documentation Generator" source="x_160486_technical">11e9a04f4f3103001d5d8ab18110c706</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Technical Documentation Generator">11e9a04f4f3103001d5d8ab18110c706</sys_scope>
         <sys_update_name>sys_script_include_d9ef15534fb903001d5d8ab18110c744</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-10-19 12:39:27</sys_updated_on>
+        <sys_updated_on>2017-10-19 14:15:29</sys_updated_on>
     </sys_script_include>
 </record_update>

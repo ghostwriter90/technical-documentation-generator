@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
     <element label="Table Exports" max_length="40" name="x_160486_technical_table_exports" type="collection">
-        <element label="Attributes" max_length="4000" name="attributes" type="glide_list"/>
+        <element label="Attributes" mandatory="true" max_length="4000" name="attributes" type="glide_list"/>
         <element choice="2" label="Category" max_length="100" name="category" type="string">
             <choice/>
         </element>
@@ -12,6 +12,10 @@
             <choice/>
         </element>
         <element label="Generated HTML" max_length="65536" name="u_html_1" type="html"/>
+        <element label="New Icon" max_length="100" name="u_icon_6" type="icon"/>
+        <element label="New Journal" max_length="4000" name="u_journal_2" type="journal"/>
+        <element label="New URL" max_length="1024" name="u_url_5" type="url"/>
+        <element attributes="preview_selector=true,preview_first=true,is_multi_text=true" label="New Wiki" max_length="65536" name="u_wiki_text_7" type="wiki_text"/>
         <element label="Version" max_length="40" name="version" read_only="true" type="integer"/>
     </element>
 </database>

@@ -3,7 +3,7 @@
     <pa_m2m_dashboard_tabs action="INSERT_OR_UPDATE">
         <dashboard display_value="My  Knowledge Dashboard">34c424d34f3903001d5d8ab18110c769</dashboard>
         <home>false</home>
-        <homepage display_value="My  Knowledge Dashboard">de6b1bac4f3103001d5d8ab18110c77e</homepage>
+        <homepage display_value="">de6b1bac4f3103001d5d8ab18110c77e</homepage>
         <order>1</order>
         <sys_class_name>pa_m2m_dashboard_tabs</sys_class_name>
         <sys_created_by>admin</sys_created_by>

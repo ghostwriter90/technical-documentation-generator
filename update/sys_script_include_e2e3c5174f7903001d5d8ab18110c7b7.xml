@@ -17,12 +17,29 @@ GetTable.prototype = Object.extendsObject(global.AbstractAjaxProcessor,{
 	getTable: function() {
 		var tableRecord = new GlideRecord(this.getParameter("table_name"));
 		tableRecord.query();
+		
+		var attributes = this.getParameter("attributes").split(",");
 		var tableString = "<table>";
+		tableString += "<tr>";
+		
+		for (var i = 0; i < attributes.length; ++i) {
+			tableString += "<td>";
+			tableString += attributes[i];
+			tableString += "</td>";
+		}
+		
+		tableString += "</tr>";
 		
 		while(tableRecord.next()) {
-			tableString += "<tr><td>";
-			tableString += tableRecord;
-			tableString += "</td></tr>";
+			tableString += "<tr>";
+			
+			for (var j = 0; j < attributes.length; ++j) {
+				tableString += "<td>";
+				tableString += tableRecord[attributes[j]];
+				tableString += "</td>";
+			}
+			
+			tableString += "</tr>";
 		}
 		
 		tableString += "</table>";
@@ -30,18 +47,18 @@ GetTable.prototype = Object.extendsObject(global.AbstractAjaxProcessor,{
 		return tableString;
 	},
 	type: 'GetTable'
-}); ]]></script>
+});]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-10-19 09:28:07</sys_created_on>
         <sys_id>e2e3c5174f7903001d5d8ab18110c7b7</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>GetTable</sys_name>
         <sys_package display_value="Technical Documentation Generator" source="x_160486_technical">11e9a04f4f3103001d5d8ab18110c706</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Technical Documentation Generator">11e9a04f4f3103001d5d8ab18110c706</sys_scope>
         <sys_update_name>sys_script_include_e2e3c5174f7903001d5d8ab18110c7b7</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-10-19 10:40:00</sys_updated_on>
+        <sys_updated_on>2017-10-19 14:17:55</sys_updated_on>
     </sys_script_include>
 </record_update>
