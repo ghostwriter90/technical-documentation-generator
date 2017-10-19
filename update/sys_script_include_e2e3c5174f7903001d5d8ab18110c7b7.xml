@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_160486_technical.GetTable</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>GetTable</name>
+        <script><![CDATA[var GetTable = Class.create();
+// Extend the global.AbstractAjaxProcessor class
+GetTable.prototype = Object.extendsObject(global.AbstractAjaxProcessor,{
+	// Define the getEmail function.
+	// Create a GlideRecord for the User table.
+	// Use the sysparm_userID passed from the client side to retrieve a record from the User table.
+	// Return the email address for the requested record
+	getTable: function() {
+		var tableRecord = new GlideRecord(this.getParameter("table_name"));
+		tableRecord.query();
+		var tableString = "<table>";
+		
+		while(tableRecord.next()) {
+			tableString += "<tr><td>";
+			tableString += tableRecord;
+			tableString += "</td></tr>";
+		}
+		
+		tableString += "</table>";
+		
+		return tableString;
+	},
+	type: 'GetTable'
+}); ]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-19 09:28:07</sys_created_on>
+        <sys_id>e2e3c5174f7903001d5d8ab18110c7b7</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>GetTable</sys_name>
+        <sys_package display_value="Technical Documentation Generator" source="x_160486_technical">11e9a04f4f3103001d5d8ab18110c706</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Technical Documentation Generator">11e9a04f4f3103001d5d8ab18110c706</sys_scope>
+        <sys_update_name>sys_script_include_e2e3c5174f7903001d5d8ab18110c7b7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-19 10:40:00</sys_updated_on>
+    </sys_script_include>
+</record_update>
