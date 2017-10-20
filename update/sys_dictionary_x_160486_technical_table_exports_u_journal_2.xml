@@ -47,15 +47,15 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-10-19 14:25:39</sys_created_on>
-        <sys_id>69b9025b0fb10300f0164d9ce1050e23</sys_id>
+        <sys_id>37a1ee634fb103001d5d8ab18110c709</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>New Journal</sys_name>
         <sys_package display_value="Technical Documentation Generator" source="x_160486_technical">11e9a04f4f3103001d5d8ab18110c706</sys_package>
         <sys_policy/>
         <sys_scope display_value="Technical Documentation Generator">11e9a04f4f3103001d5d8ab18110c706</sys_scope>
         <sys_update_name>sys_dictionary_x_160486_technical_table_exports_u_journal_2</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-10-19 14:25:39</sys_updated_on>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2017-10-20 10:48:54</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

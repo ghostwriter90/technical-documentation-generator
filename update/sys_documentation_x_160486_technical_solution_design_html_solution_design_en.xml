@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="html_solution_design" label="HTML Solution Design" language="en" table="x_160486_technical_solution_design">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>html_solution_design</element>
+            <help/>
+            <hint/>
+            <label>HTML Solution Design</label>
+            <language>en</language>
+            <name>x_160486_technical_solution_design</name>
+            <plural>HTML Solution Designs</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-10-20 12:44:41</sys_created_on>
+            <sys_id>583c3a234ff103001d5d8ab18110c7ba</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>HTML Solution Design</sys_name>
+            <sys_package display_value="Technical Documentation Generator" source="x_160486_technical">11e9a04f4f3103001d5d8ab18110c706</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Technical Documentation Generator">11e9a04f4f3103001d5d8ab18110c706</sys_scope>
+            <sys_update_name>sys_documentation_x_160486_technical_solution_design_html_solution_design_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-10-20 12:44:41</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

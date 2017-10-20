@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Techical Documentation Version" max_length="40" name="x_160486_technical_techical_documentation_version" type="collection">
+        <element label="Business Approval" max_length="40" name="business_approval" type="boolean"/>
+        <element label="Generated HTML" max_length="8000" name="generated_html" type="html"/>
+        <element label="Technical Approval" max_length="40" name="technical_approval" type="boolean"/>
+        <element label="Technical Design Documentation" max_length="32" name="technical_design_documentation" reference="x_160486_technical_solution_design" type="reference"/>
+        <element label="Version" max_length="40" name="version" type="integer"/>
+        <index name="index">
+            <element name="technical_design_documentation"/>
+        </index>
+    </element>
+</database>

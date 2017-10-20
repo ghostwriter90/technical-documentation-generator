@@ -7,6 +7,7 @@
         </element>
         <element dependent="table_name" dependent_on_field="table_name" label="Table Filter" max_length="40" name="conditions" type="conditions" use_dependent_field="true"/>
         <element label="HTML" max_length="65536" name="html" type="html"/>
+        <element display="true" label="Name" max_length="100" name="name" type="string"/>
         <element label="Order" max_length="40" name="order" type="longint"/>
         <element choice="2" label="Table name" mandatory="true" max_length="80" name="table_name" type="table_name">
             <choice/>
