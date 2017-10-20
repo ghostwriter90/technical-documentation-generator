@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update sys_domain="global" table="sys_script_client">
     <sys_script_client action="INSERT_OR_UPDATE">
-        <active>true</active>
+        <active>false</active>
         <applies_extended>false</applies_extended>
         <condition/>
         <description>HI</description>
@@ -21,6 +21,7 @@
 	myObj.addParam('sysparm_name','getTable');
 	myObj.addParam('table_name',g_form.getValue('table_name'));
 	myObj.addParam('attributes',g_form.getValue('attributes'));
+	myObj.addParam('conditions',g_form.getValue('conditions'));
 	
 	myObj.getXML(populateHTML);
 	
@@ -39,7 +40,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>6a308d934f7903001d5d8ab18110c703</sys_id>
-        <sys_mod_count>19</sys_mod_count>
+        <sys_mod_count>21</sys_mod_count>
         <sys_name>Create HTML</sys_name>
         <sys_overrides/>
         <sys_package display_value="Technical Documentation Generator" source="x_160486_technical">11e9a04f4f3103001d5d8ab18110c706</sys_package>
@@ -47,7 +48,7 @@
         <sys_scope display_value="Technical Documentation Generator">11e9a04f4f3103001d5d8ab18110c706</sys_scope>
         <sys_update_name>sys_script_client_6a308d934f7903001d5d8ab18110c703</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-10-19 15:00:14</sys_updated_on>
+        <sys_updated_on>2017-10-20 09:55:23</sys_updated_on>
         <table>x_160486_technical_table_exports</table>
         <type>onChange</type>
         <ui_type>10</ui_type>
