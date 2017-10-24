@@ -5,22 +5,22 @@
         <license_condition/>
         <license_model>none</license_model>
         <license_roles/>
-        <name>x_160486_technical_solution_design</name>
+        <name>x_160486_technical_table_exports</name>
         <op_delete>true</op_delete>
         <op_insert>true</op_insert>
         <op_update>true</op_update>
         <owner_condition/>
         <sys_class_name>ua_table_licensing_config</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-10-20 12:31:16</sys_created_on>
-        <sys_id>3b197eaf4fb103001d5d8ab18110c780</sys_id>
+        <sys_created_on>2017-10-18 13:27:35</sys_created_on>
+        <sys_id>a9fe1beb0ff90300f0164d9ce1050ef8</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>x_160486_technical_solution_design</sys_name>
+        <sys_name>x_160486_technical_table_exports</sys_name>
         <sys_package display_value="Technical Documentation Generator" source="x_160486_technical">11e9a04f4f3103001d5d8ab18110c706</sys_package>
         <sys_policy/>
         <sys_scope display_value="Technical Documentation Generator">11e9a04f4f3103001d5d8ab18110c706</sys_scope>
-        <sys_update_name>ua_table_licensing_config_3b197eaf4fb103001d5d8ab18110c780</sys_update_name>
+        <sys_update_name>ua_table_licensing_config_a9fe1beb0ff90300f0164d9ce1050ef8</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-10-20 12:31:16</sys_updated_on>
+        <sys_updated_on>2017-10-18 13:27:35</sys_updated_on>
     </ua_table_licensing_config>
 </record_update>

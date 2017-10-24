@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_160486_technical.GetTableFromRecord</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>GetTableFromRecord</name>
+        <script><![CDATA[var GetTableFromRecord = Class.create();
+GetTableFromRecord.prototype = {
+	initialize: function() {
+	},
+	
+    getTable: function(tableName, conditions, attributeNames) {
+		var tableRecord = new GlideRecord(tableName);
+		
+		if (conditions != '') {
+			tableRecord.addEncodedQuery(conditions);
+		}
+		
+		tableRecord.query();
+		
+		var attributes = attributeNames.split(",");
+		var tableString = "<table>";
+		tableString += "<tr>";
+		
+		for (var i = 0; i < attributes.length; ++i) {
+			tableString += "<td>";
+			tableString += attributes[i];
+			tableString += "</td>";
+		}
+		
+		tableString += "</tr>";
+		
+		while(tableRecord.next()) {
+			tableString += "<tr>";
+			
+			for (var j = 0; j < attributes.length; ++j) {
+				tableString += "<td>";
+				tableString += tableRecord[attributes[j]].getDisplayValue();
+				tableString += "</td>";
+			}
+			
+			tableString += "</tr>";
+		}
+		
+		tableString += "</table>";
+		
+		return tableString;
+    },
+
+    type: 'GetTableFromRecord'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-24 13:20:18</sys_created_on>
+        <sys_id>1859efb80f820300f0164d9ce1050e30</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>GetTableFromRecord</sys_name>
+        <sys_package display_value="Technical Documentation Generator" source="x_160486_technical">11e9a04f4f3103001d5d8ab18110c706</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Technical Documentation Generator">11e9a04f4f3103001d5d8ab18110c706</sys_scope>
+        <sys_update_name>sys_script_include_1859efb80f820300f0164d9ce1050e30</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-24 13:45:00</sys_updated_on>
+    </sys_script_include>
+</record_update>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update sys_domain="global" table="sys_ui_action">
     <sys_ui_action action="INSERT_OR_UPDATE">
-        <action_name>generate_html</action_name>
+        <action_name>preview_html</action_name>
         <active>true</active>
         <client>true</client>
         <comments/>
@@ -20,7 +20,7 @@
         <list_link>false</list_link>
         <list_save_with_form_button>false</list_save_with_form_button>
         <list_style/>
-        <name>Generate HTML</name>
+        <name>Preview HTML</name>
         <onclick>generateHTML()</onclick>
         <order>100</order>
         <script><![CDATA[function generateHTML() {
@@ -39,9 +39,12 @@
 	
 	
 	function populateHTML(response) {
-		var responseArray = response.responseXML.documentElement.getAttribute("answer");
+		var responseString = response.responseXML.documentElement.getAttribute("answer");
+
+		var fullResponse = '<h2>' + g_form.getValue('name') + '</h2>';
+		fullResponse += responseString;
 		
-		g_form.setValue('html',responseArray);
+		g_form.setValue('html',fullResponse);
 	}
 }]]></script>
         <show_insert>true</show_insert>
@@ -54,15 +57,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>b1630ea30f790300f0164d9ce1050ee7</sys_id>
-        <sys_mod_count>11</sys_mod_count>
-        <sys_name>Generate HTML</sys_name>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_name>Preview HTML</sys_name>
         <sys_overrides/>
         <sys_package display_value="Technical Documentation Generator" source="x_160486_technical">11e9a04f4f3103001d5d8ab18110c706</sys_package>
         <sys_policy/>
         <sys_scope display_value="Technical Documentation Generator">11e9a04f4f3103001d5d8ab18110c706</sys_scope>
         <sys_update_name>sys_ui_action_b1630ea30f790300f0164d9ce1050ee7</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-10-20 09:58:43</sys_updated_on>
+        <sys_updated_on>2017-10-24 14:21:41</sys_updated_on>
         <table>x_160486_technical_table_exports</table>
         <ui11_compatible>false</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>
