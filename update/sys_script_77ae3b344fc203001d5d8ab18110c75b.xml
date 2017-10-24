@@ -4,22 +4,22 @@
         <abort_action>false</abort_action>
         <access>package_private</access>
         <action_delete>false</action_delete>
-        <action_insert>true</action_insert>
+        <action_insert>false</action_insert>
         <action_query>false</action_query>
-        <action_update>true</action_update>
+        <action_update>false</action_update>
         <active>true</active>
         <add_message>false</add_message>
         <advanced>true</advanced>
         <change_fields>false</change_fields>
         <client_callable>false</client_callable>
-        <collection>x_160486_technical_solution_design</collection>
+        <collection>x_160486_technical_table_exports</collection>
         <condition/>
         <description/>
         <execute_function>false</execute_function>
         <filter_condition/>
         <is_rest>false</is_rest>
         <message/>
-        <name>Create Technical Documentation Version</name>
+        <name>Sort Included Tables</name>
         <order>100</order>
         <priority>100</priority>
         <rest_method/>
@@ -29,47 +29,43 @@
         <rest_variables/>
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
-
+	
 	// Add your code here
-	var tddVersionRecord = new GlideRecord("x_160486_technical_techical_documentation_version");
-	tddVersionRecord.technical_design_documentation = current.sys_id;
-	tddVersionRecord.generated_html = current.html_solution_design;
-	tddVersionRecord.version = current.version++;
-	tddVersionRecord.business_approval = false;
-	tddVersionRecord.technical_approval = false;
+	var inclTableRecord = new GlideRecord('x_160486_technical_table_exports');
 	
-	var included_tables = current.included_tables.split(',');
 	
-	for (var i = 0; i < included_tables.length; i++) {
-		var inclTableRecord = new GlideRecord('x_160486_technical_table_exports');
-		
-		inclTableRecord.get(included_tables[i]);
-		inclTableRecord.query();
-		
-		tddVersionRecord.generated_html += inclTableRecord.html;
+	inclTableRecord.orderBy('category');
+	inclTableRecord.orderBy('order');
+	inclTableRecord.orderBy('table_name');
+	inclTableRecord.addQuery('sys_id','IN',current.included_tables);
+	inclTableRecord.query();
+	
+	var sortedInclTables = '';
+	
+	while(inclTableRecord.next()) {
+		sortedInclTables += inclTableRecord.sys_id;
+		sortedInclTables += ',';
 	}
 	
-	
-	
-	tddVersionRecord.insert();
+	current.included_tables = sortedInclTables;
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-10-19 08:28:00</sys_created_on>
+        <sys_created_on>2017-10-24 14:58:19</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>c0b6389f4f3903001d5d8ab18110c770</sys_id>
-        <sys_mod_count>11</sys_mod_count>
-        <sys_name>Create Technical Documentation Version</sys_name>
+        <sys_id>77ae3b344fc203001d5d8ab18110c75b</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Sort Included Tables</sys_name>
         <sys_overrides/>
         <sys_package display_value="Technical Documentation Generator" source="x_160486_technical">11e9a04f4f3103001d5d8ab18110c706</sys_package>
         <sys_policy/>
         <sys_scope display_value="Technical Documentation Generator">11e9a04f4f3103001d5d8ab18110c706</sys_scope>
-        <sys_update_name>sys_script_c0b6389f4f3903001d5d8ab18110c770</sys_update_name>
+        <sys_update_name>sys_script_77ae3b344fc203001d5d8ab18110c75b</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-10-24 08:52:36</sys_updated_on>
+        <sys_updated_on>2017-10-24 15:20:24</sys_updated_on>
         <template/>
-        <when>after</when>
+        <when>before</when>
     </sys_script>
-    <sys_translated_text action="delete_multiple" query="documentkey=c0b6389f4f3903001d5d8ab18110c770"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=77ae3b344fc203001d5d8ab18110c75b"/>
 </record_update>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
     <element label="Technical Design Documentation" max_length="40" name="x_160486_technical_solution_design" type="collection">
-        <element label="Application Name" max_length="200" name="application_name" type="string"/>
+        <element display="true" label="Application Name" max_length="200" name="application_name" type="string"/>
         <element choice="2" label="Business Approver" max_length="500" name="business_approver" reference="sys_user" type="glide_list">
             <choice/>
         </element>
