@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
     <element label="Table Exports" max_length="40" name="x_160486_technical_table_exports" type="collection">
-        <element label="Attributes" mandatory="true" max_length="4000" name="attributes" type="glide_list"/>
+        <element label="Attributes" mandatory="true" max_length="40000" name="attributes" type="glide_list"/>
         <element choice="2" label="Category" max_length="100" name="category" type="string">
             <choice/>
         </element>

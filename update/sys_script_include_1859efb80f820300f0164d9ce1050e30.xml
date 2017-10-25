@@ -26,9 +26,9 @@ GetTableFromRecord.prototype = {
 		tableString += "<tr>";
 		
 		for (var i = 0; i < attributes.length; ++i) {
-			tableString += "<td>";
+			tableString += "<td><strong>";
 			tableString += attributes[i];
-			tableString += "</td>";
+			tableString += "</strong></td>";
 		}
 		
 		tableString += "</tr>";
@@ -56,13 +56,13 @@ GetTableFromRecord.prototype = {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-10-24 13:20:18</sys_created_on>
         <sys_id>1859efb80f820300f0164d9ce1050e30</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>GetTableFromRecord</sys_name>
         <sys_package display_value="Technical Documentation Generator" source="x_160486_technical">11e9a04f4f3103001d5d8ab18110c706</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Technical Documentation Generator">11e9a04f4f3103001d5d8ab18110c706</sys_scope>
         <sys_update_name>sys_script_include_1859efb80f820300f0164d9ce1050e30</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-10-24 13:45:00</sys_updated_on>
+        <sys_updated_on>2017-10-25 13:10:29</sys_updated_on>
     </sys_script_include>
 </record_update>
